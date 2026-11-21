@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MySphere — design, creativity and digital marketing.">
+  <title>Ragu R | MySphere — Designer & Digital Marketing</title>
+  <style>
+    :root{--bg:#0b1020;--panel:#121a2e;--text:#f4f7ff;--muted:#aab5ca;--accent:#79e0d1;--accent2:#8ca7ff;--line:rgba(255,255,255,.11);--max:1100px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 80% 0%,#1b2a4a 0,transparent 32%),var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}header{position:sticky;top:0;z-index:10;backdrop-filter:blur(16px);background:rgba(11,16,32,.86);border-bottom:1px solid var(--line)}
+    nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-weight:850;font-size:1.35rem;letter-spacing:-.05em}.logo span{color:var(--accent)}
+    .navlinks{display:flex;gap:26px;color:var(--muted);font-size:.94rem}.navlinks a:hover{color:var(--accent)}.menu{display:none;border:1px solid var(--line);color:var(--text);background:var(--panel);border-radius:10px;padding:8px 12px}
+    .hero{min-height:76vh;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:50px;padding:85px 0 70px}.eyebrow{color:var(--accent);font-size:.82rem;font-weight:750;letter-spacing:.16em;text-transform:uppercase}
+    h1{font-size:clamp(3rem,7vw,5.7rem);line-height:.99;letter-spacing:-.065em;margin:18px 0 24px}h1 em{color:var(--accent);font-style:normal}.lead{color:var(--muted);font-size:1.12rem;max-width:610px}
+    .actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 20px;font-weight:750;border:1px solid var(--line);transition:.2s}.btn.primary{background:var(--accent);color:#07131b;border-color:var(--accent)}.btn:hover{transform:translateY(-2px)}
+    .portrait{min-height:390px;border-radius:28px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(121,224,209,.18),rgba(140,167,255,.12)),var(--panel);display:grid;place-items:center;position:relative;overflow:hidden}
+    .portrait:before,.portrait:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.15);border-radius:50%;width:310px;height:310px}.portrait:after{width:220px;height:220px}
+    .avatar{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;font-size:2.5rem;font-weight:850;color:#07131b;background:linear-gradient(135deg,var(--accent),var(--accent2));z-index:1;box-shadow:0 20px 80px rgba(121,224,209,.2)}
+    .profile-photo{padding:0;min-height:390px}.profile-photo:before,.profile-photo:after{display:none}.profile-photo img{width:100%;height:100%;min-height:390px;object-fit:cover;object-position:center 28%;display:block;border-radius:28px}
+    section{padding:76px 0}.section-head{margin-bottom:30px}h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.045em;margin:8px 0}.section-copy{color:var(--muted);max-width:650px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:rgba(18,26,46,.82);border:1px solid var(--line);border-radius:20px;padding:24px}.card h3{margin:8px 0;font-size:1.12rem}.card p{margin:0;color:var(--muted)}.icon{color:var(--accent);font-size:1.5rem}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}.chip{border:1px solid var(--line);background:rgba(255,255,255,.04);color:#dce5f7;border-radius:999px;padding:9px 14px;font-size:.92rem}
+    .project{min-height:220px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(140deg,rgba(140,167,255,.13),rgba(121,224,209,.06)),var(--panel)}.project small{color:var(--accent);font-weight:750;letter-spacing:.1em;text-transform:uppercase}
+    .contact{display:flex;align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(120deg,rgba(121,224,209,.12),rgba(140,167,255,.12));border:1px solid var(--line);border-radius:26px;padding:34px}
+    footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.9rem}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:60px}.portrait{min-height:280px}.grid{grid-template-columns:1fr}.navlinks{display:none;position:absolute;top:72px;left:0;right:0;padding:20px;background:#0b1020;border-bottom:1px solid var(--line);flex-direction:column}.navlinks.open{display:flex}.menu{display:inline-block}.contact{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<header><nav class="wrap">
+  <a class="logo" href="#home">My<span>Sphere</span></a>
+  <button class="menu" id="menu" aria-label="Toggle navigation">Menu</button>
+  <div class="navlinks" id="navlinks"><a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Designer · Digital Marketing</div>
+      <h1>Hi, I’m Ragu R.<br><em>Creative thinker.</em></h1>
+      <p class="lead">Welcome to <strong>MySphere</strong> — my creative space for design, digital marketing, and ideas that make an impact. I bring ideas to life through thoughtful visuals, engaging content, and digital strategies that help brands grow.</p>
+      <div class="actions"><a class="btn primary" href="#projects">Explore my work</a><a class="btn" href="#contact">Let's connect</a></div>
+    </div>
+    <div class="portrait profile-photo"><img src="ragu-profile.png" alt="Portrait of Ragu R"></div>
+  </div>
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">About MySphere</div><h2>Design with purpose.<br>Marketing with meaning.</h2></div>
+    <p class="section-copy">I'm Ragu R, a designer and digital marketing enthusiast with an interest in creative communication and building memorable online experiences. MySphere is where I showcase my creative work, explore ideas, and share how design and strategy can work together.</p>
+  </div></section>
+  <section id="services"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">What I do</div><h2>Creative services</h2><p class="section-copy">A blend of visual creativity and digital thinking to help ideas stand out online.</p></div>
+    <div class="grid">
+      <article class="card"><div class="icon">✦</div><h3>Graphic & Visual Design</h3><p>Eye-catching graphics, layouts, and visual identities that communicate clearly.</p></article>
+      <article class="card"><div class="icon">↗</div><h3>Digital Marketing</h3><p>Creative campaign ideas, social media content, and audience-focused digital promotion.</p></article>
+      <article class="card"><div class="icon">◎</div><h3>Content & Branding</h3><p>Consistent brand visuals and engaging content that help build recognition.</p></article>
+    </div>
+  </div></section>
+  <section id="skills"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">My toolkit</div><h2>Skills & interests</h2><p class="section-copy">Edit these to match the tools and strengths you use.</p></div>
+    <div class="skills"><span class="chip">Graphic Design</span><span class="chip">Social Media Marketing</span><span class="chip">Content Creation</span><span class="chip">Branding</span><span class="chip">Creative Strategy</span><span class="chip">Visual Storytelling</span><span class="chip">[Add your tools]</span></div>
+  </div></section>
+  <section id="projects"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Selected work</div><h2>Projects & portfolio</h2><p class="section-copy">Replace these sample cards with your real designs, campaigns, and case studies.</p></div>
+    <div class="grid">
+      <article class="card project"><div><small>Design project</small><h3>Brand Identity Concept</h3><p>A sample space for a logo, brand system, or visual identity project.</p></div><a href="#contact">View project details ↗</a></article>
+      <article class="card project"><div><small>Social media</small><h3>Social Campaign</h3><p>Show a social media campaign, content calendar, or creative post series.</p></div><a href="#contact">View project details ↗</a></article>
+      <article class="card project"><div><small>Digital marketing</small><h3>Digital Growth Plan</h3><p>Highlight a marketing strategy, campaign idea, or measurable result.</p></div><a href="#contact">View project details ↗</a></article>
+    </div>
+  </div></section>
+  <section id="contact"><div class="wrap"><div class="contact">
+    <div><div class="eyebrow">Let's work together</div><h2>Have an idea? Let's talk.</h2><p class="section-copy">Want to discuss a design idea or digital marketing project? Reach me by email or phone.</p>
+      <p class="section-copy"><strong>Email:</strong> <a href="mailto:raguravi2202@gmail.com">raguravi2202@gmail.com</a><br>
+      <strong>UAE:</strong> <a href="tel:+971581978454">+971 58 197 8454</a><br>
+      <strong>India:</strong> <a href="tel:+918754829477">+91 87548 29477</a></p></div>
+    <a class="btn primary" href="mailto:raguravi2202@gmail.com">Email me ↗</a>
+  </div></div></section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> MySphere · Ragu R. Designed with creativity.</div></footer>
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+  menu.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
+</body></html>
