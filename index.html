@@ -434,65 +434,54 @@ Digital Vision.</h1>
 <p>A space for my creative projects and work.</p>
 </div>
 <div class="grid">
-<div class="card project">
-<small>01 / DESIGN</small>
-<h3>Poster Design</h3>
-<p>Creative promotional and advertising poster designs.</p>
-</div>
-<div class="card project">
-<small>02 / BRANDING</small>
-<h3>Brand Identity</h3>
-<p>Visual identity and branding concepts for businesses.</p>
-</div>
-<div class="card project">
-<small>03 / MARKETING</small>
-<h3>Digital Campaigns</h3>
-<p>Creative marketing and social media campaign concepts.</p>
-</div>
-</div>
-</section>
+  <div class="card project">
+    <small>01 / DESIGN</small>
+    <h3>Poster Design</h3>
+    <p>Creative promotional and advertising poster designs.</p>
+  </div>
 
-<section id="contact" class="reveal">
-<div class="contact">
-<p class="tag">Have a project in mind?</p>
-<h2>Let's Create Something Amazing!</h2>
-<p>Have an idea or business project? Let's connect and make it happen.</p>
-<div class="buttons">
-<a class="btn" href="mailto:raguravi2202@gmail.com">✉ Email Me</a>
-<a class="btn outline" href="https://wa.me/971581978454" target="_blank" rel="noopener">WhatsApp Me ↗</a>
-</div>
-</div>
-</section>
+  <div class="card project">
+    <small>02 / BRANDING</small>
+    <h3>Brand Identity</h3>
+    <p>Visual identity and branding concepts for businesses.</p>
+  </div>
 
+  <div class="card project">
+    <small>03 / MARKETING</small>
+    <h3>Digital Campaigns</h3>
+    <p>Creative marketing and social media campaign concepts.</p>
+  </div>
+
+  <div class="card project">
+    <small>04 / CREATIVE DESIGN</small>
+    <div class="emoji">🎨</div>
+    <h3>Creative Design</h3>
+    <p>
+      Promotional posters, advertising creatives,
+      Canva graphic designs and AI-assisted visual
+      content crafted to make brands stand out.
+    </p>
+
+    <a href="https://drive.google.com/drive/folders/1FX93sswufh2cCPO1shV4eX15IfSqWL0r"
+       target="_blank"
+       rel="noopener"
+       style="display:inline-block;margin-top:18px;color:#c59aff;font-weight:700;">
+      View Creative Work ↗
+    </a>
+  </div>
+</div> 
+
+
+</section>
 </div>
 </main>
-
-<footer>
-<p>© 2026 MySphere | Created with <span>♥</span> by Ragu R.</p>
-<p>Design. Create. Grow.</p>
-</footer>
 
 <script>
 const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 
 menuBtn.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');<div class="card project">
-    <small>04 / CREATIVE DESIGN</small>
-    <div class="emoji">🎨</div>
-    <h3>Creative Design</h3>
-    <p>
-        Promotional posters, advertising creatives,
-        Canva graphic designs and AI-assisted visual
-        content crafted to make brands stand out.
-    </p>
-    <a href="https://drive.google.com/drive/folders/1FX93sswufh2cCPO1shV4eX15IfSqWL0r"
-       target="_blank"
-       rel="noopener"
-       style="display:inline-block;margin-top:18px;color:#c59aff;font-weight:700;">
-       View Creative Work ↗
-    </a>
-</div>
+  const isOpen = navLinks.classList.toggle('open');
   menuBtn.setAttribute('aria-expanded', isOpen);
   menuBtn.textContent = isOpen ? '✕' : '☰';
 });
@@ -512,12 +501,16 @@ const observer = new IntersectionObserver(entries => {
       observer.unobserve(entry.target);
     }
   });
-}, {threshold: 0.12});
+}, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach(section => {
   observer.observe(section);
 });
 </script>
+
+<footer>
+  © 2026 MySphere. All rights reserved.
+</footer>
 
 </body>
 </html>
